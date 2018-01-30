@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05.标签的分类</title>
+	<style>
+		.block-label{
+			height: 30px;
+		}
+		div{
+			background-color: red;
+		}
+		p{
+			background-color: yellowgreen;
+		}
+		h1{
+			background-color: blue;
+		}
+		ul{
+			background-color: green;
+		}
+		li{
+			background-color: orange;
+		}
+		span{
+			background-color: yellow;
+		}
+		em{
+			background-color: orange;
+		}
+		strong{
+			background-color: green;
+		}
+		ins{
+			background-color: orange;
+		}
+		del{
+			background-color: yellowgreen;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+		}
+		input{
+			width: 200px;
+			height: 30px;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<!-- 常见的块级元素 -->
+	<!-- 1.独占一行；2.可以设置长宽；3.嵌套情况下，子元素宽度默认同父类相同 -->
+	<!-- div；p,h1-h6,ul,li -->
+	<div class="block-label"></div>
+	<p class="block-label"></p>
+	<h1 class="block-label"></h1>
+	<ul class="block-label">
+		<li class="block-label"></li>
+	</ul>
+	<!-- 常见的行内元素 -->
+	<!-- 1.在一行显示；2.宽高不能手动设置，根据内容撑开，与父元素的宽高无关 -->
+	<!-- span,em,strong.ins,del -->
+	<span>span</span>
+	<em>em</em>
+	<strong>strong</strong>
+	<ins>ins</ins>
+	<del>del</del>
+	<div></div>
+	<!-- 常见的行内块级元素 -->
+	<!-- 1.在一行显示；2.可以设置宽高 -->
+	<!-- img,input -->
+	<img src="images/putHand.png" alt="">
+	<input type="button" value="按钮">
+	<!-- 可以通过元素的display属性对标签类别进行转化，block行，inline行内，inline-block行内块 -->
+</body>
+</html>
