@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13.css继承与层叠性思考题</title>
+	<style type="text/css">
+
+			
+			#father #son{  
+				color:blue;
+			}
+			
+			#father p.c2{
+				color:black;
+			}
+			p{
+				color:blue;
+			}
+			#father1{
+				color:red;
+			}
+			div div div div div div div div div div div div{  
+				color:red;
+			}
+			.me{ 
+				color:blue;
+			}
+
+		</style>
+</head>
+<body>
+	#father #son -->0,2,0,0 <br>
+	#father p.c2 -->0,1,1,1 <br>
+	-->所以为蓝色<br>
+	<div id="father" class="c1">
+			<p id="son" class="c2">
+				试问这行字体是什么颜色的？
+			</p>
+	</div>
+	#father1--> 通过继承传递给p 继承无特殊性，其特殊性为无 <br>
+	p -->特殊性0,0,0,1  <br>
+	-->所以为蓝色 <br>
+	<div id="father1">
+			<p >试问这行字体是什么颜色的？</p>
+	</div>
+	div div div div div div div div div div div div -->0,0,0,12 <br>
+	.me --> 0,0,1,0 <br>
+	所以，为蓝色<br>
+	<div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+											<div>
+												<div class="me">试问这行文字是什么颜色的
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

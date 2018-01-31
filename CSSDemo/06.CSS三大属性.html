@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>06.CSS三大属性</title>
+	<style>
+		div{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+		}
+		.classSel{
+			background-color: yellowgreen;
+		}
+		#idSel{
+			background-color: purple;
+		}
+		.father{
+			height: 200px;
+			width: 300px;
+			background-color: orange;
+			color: green;
+		}
+		/**{
+			color: red
+		}*/
+		.im-test{
+			background-color: pink !important;
+		}
+		.a-test:link{
+			color: green;
+		}
+		.a-test:visited{
+			color: pink;
+		}
+		.a-test:hover{
+			color: orange;
+		}
+		.a-test:focus{
+			color: blue;
+		}
+		.a-test:active{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+		1.特殊性<br>
+		含义：如果两条规则作用于同一个标签，选择谁，就需要考虑css选择器的特殊性；<br>
+		1.规则：特殊性组成0,0,0,0；行内样式：1,0,0.0;id选择器0,1,0,0；类及伪类选择器：0,0,1,0;标签选择器：0,0,0,1；通配符选择器：0,0,0,0 <br>
+		谁的特殊性高，谁胜出<br>
+
+		<div class="classSel" id ="idSel" style="background-color: red"></div>
+		
+		2.继承性<br>
+		含义：父级元素的属性可以传递给其后代，文字属性都可以继承<br>
+		注意：1.方向：一般继承性，是向下传递的，不能向上传递，一个例外，body的bgc可以传递给其上的画布；<br>
+			  2.继承无特殊性，通配符的特殊性尽管为0,0,0,0但是仍然高于继承(将注释的通配符代码反注释就可见了) <br>
+			  3.继承"无效"现象：a标签，没有显示父元素传递下来的颜色，原因在于用户代理设置可能用这样的代码实现：a:link{color:blue} <br>
+		<div class="father">
+			我是父视图
+			<a href="https://www.baidu.com">just fot testting!</a>
+			<div class="son">我是子视图</div>
+		</div>
+		3.层叠性<br>
+		含义：确定一个元素应用哪些值，不仅要考虑继承，还要考虑特殊性，重要声明，以及声明的来源，这个过程，我们就成为层叠<br>
+		规则：1.重要的高于非重要的<br>
+			  2.相同重要性的，特殊性高胜<br>
+		      3.如果1,2都相同，后写的，胜出<br>		 注意：1.a标签设置属性的时候为什么要遵循爱恨原则；因为a不同状态对文字颜色的设置的特殊性相同，这时总是最后一个与元素匹配的选择器胜出，其他状态下的样式就看不了<br>
+		      未访问时link，鼠标放上去之后是hover，点击时是active，点击之后是focus，访问过是visited <br>
+		<div id="idSel">重要性测试查看（无重要性）</div>
+		<div class="im-test" id="idSel">重要性测试查看（有重要性）</div>
+		<a href="http://www.baidu.com" class="a-test">链接伪类的爱恨原则</a>
+</body>
+</html>

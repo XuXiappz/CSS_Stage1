@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>08.背景属性</title>
+	<style>
+		div{
+			background-color: #900;
+		}
+		.bgc-test{
+			height: 100px;
+			width: 100px;
+			background-color: #900;
+			border: 5px dotted green;
+		}
+		.bgimg-test{
+			height: 100px;
+			width: 100px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: no-repeat;
+		}
+		.bgp-keywords{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: no-repeat;
+			background-position: right bottom;
+		}
+		.bgp-percent{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: no-repeat;
+			background-position: 30% 50%;
+		}
+		.bgp-num{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: no-repeat;
+			background-position: 70px 50px;
+		}
+		.bgr-repeat{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: repeat;
+		}
+		.bgr-repeat-x{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat:repeat-x;
+		}
+		.bgr-repeat-y{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: repeat-y
+		}
+		.bgr-repeat-no{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: no-repeat;
+		}
+		.bgr-bgp-repeat-x{
+			height: 200px;
+			width: 200px;
+			border: 5px dotted blue;
+			background-image: url('images/putHand.png');
+			background-repeat: repeat-x;
+			background-position: center top;
+		}
+	</style>
+</head>
+
+<body>
+	1.背景颜色<br> 
+	背景颜色的区域是到边框的外边界的<br>
+	<div class="bgc-test"></div>
+	2.背景图片<br>
+	背景图片的区域是到边框的内边界的<br>
+	<div class="bgimg-test"></div>
+	3.背景图片定位<br>
+	3.1关键字<br>
+	规则：
+	1.关键字有：left，center，right，top，bottom
+	2.是将图片关键字描述的点和元素关键字描述的点对齐
+    3.垂直和水平方向的关键字只能出现一个，顺序随意，可以省略，省略其中一个，其缺省值为center,都省略，其缺省值为left，top
+    <div class="bgp-keywords"></div>
+	3.2百分数<br>
+	规则：
+	1.百分数的含义同关键字相同，是将图片百分数描述的点和元素百分数描述的点对齐
+	2.关键字其实就是特殊的百分数：
+		垂直方向上：top，0%；center，50%；bottom，100%；
+		水平方向上：left，0%;center,50%;right,100%;
+	3.百分数描述的值必须成对出现，且，先描述水平，再描述垂直
+	<div class="bgp-percent"></div>
+	3.3数值<br>
+	规则：
+	1.是将图片的左上角同元素的左上角偏移(x,y)段距离，默认图片的左上角和元素的左上角重合，所谓的偏移就是两个左上角之间的偏移，向右，向下为正
+	2.同百分数相同，值成对出现，且先描述水平，再描述垂直
+	<div class="bgp-num"></div>
+	4.背景平铺
+	1.背景平铺区域：虽然背景图片上下文是在边框内边界内的，但是平铺时会有延展，充分平铺到元素中
+	2.背景平铺属性值
+	2.1repeat，说明：水平和垂直方向上进行平铺，默认值
+	<div class="bgr-repeat"></div>
+	2.2repeat-x，说明：水平方向上进行平铺
+	<div class="bgr-repeat-x"></div>
+	2.3repeat-y，说明：垂直方向上进行平铺
+	<div class="bgr-repeat-y"></div>
+	2.4no-repeat，说明：不平铺
+	<div class="bgr-repeat-no"></div>
+	3.平铺深入（方向性）
+	说明：
+		平铺的起点都是从一个图像开始的，这个起点，我们称为原图像（origin image），origin image的默认起点是左上角
+		通过定位可以改变这个origin image的起始位置，从而影响其平铺方式
+	<div class="bgr-repeat-x"></div>
+	<div class="bgr-bgp-repeat-x"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>09.背景属性练习</title>
+	<style>
+		body{
+			word-spacing: -8px;
+		}
+		.serch{
+			background: white url('images/serch.jpg') no-repeat right center;
+		}
+		ul li{
+			list-style: none;/*清除列表项符号*/
+			background: white url('images/liFlag.gif') no-repeat left center;
+			text-indent: 1em;
+		}
+		.shopcar{
+			display: inline-block;
+			width: 65px;
+			height: 30px;
+			background:#7d0000 url('images/shopcar.png') bottom left;
+		}
+		.shopcar:hover {
+			background: #7d0000 url('images/shopcar.png') top left;
+		}
+	</style>
+</head>
+<body>
+	背景图片定位1搜索小图标<br>
+	<input  class="serch" type="text"  value="请输入关键字"><br>
+	背景图片定位2列表标题<br>
+	<ul>
+		<li><a href="#">列表小图片案例</a></li>
+		<li><a href="#">列表小图片案例</a></li>
+		<li><a href="#">列表小图片案例</a></li>
+		<li><a href="#">列表小图片案例</a></li>
+		<li><a href="#">列表小图片案例</a></li>
+	</ul>
+	购物车案例<br>
+	<!-- <div class="shopcar"><a href="#"></a></div> -->
+	<a href="#" class="shopcar"></a>
+</body>
+</html>
