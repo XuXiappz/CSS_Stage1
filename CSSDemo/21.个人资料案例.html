@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>20.个人资料案例</title>
+	<style>
+		.personInfo-box{
+			height: 386px;
+			width: 208px;
+			border: solid #aaa 1px;
+			margin: 0 auto;
+		}
+		.personInfo-title{
+			height: 25px;
+			background-color: #eee;
+			padding-left: 10px;
+			font: 14px/25px 微软雅黑;
+		}
+		.personInfo-head{
+			height:255px;
+			border-bottom: 1px dotted #aaa; 
+			text-align: center;
+			padding-top: 10px;
+		}
+		.personInfo-head img{
+			border: 1px solid #aaa;
+			height: 180px;
+			width: 180px;
+		}
+		.personInfo-head-name{
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background: url('images/person_vip.jpg') 130px center no-repeat;
+		}
+		.personInfo-head-weibo{
+			text-align: center;
+		}
+		.personInfo-head-weibo input{
+			display: inline-block;
+			width: 65px;
+			text-align: center;
+			background: url('images/person_wb.jpg') no-repeat center left;
+			outline-style: none;
+		}
+		.personInfo-func{
+			text-align: center;
+			padding-top: 20px;
+		}
+		.personInfo-func-lineOne{
+			padding-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="personInfo-box">
+		<div class="personInfo-title">个人资料</div>
+		<div class="personInfo-head">
+			<img src="images/person_head.jpg" alt="">
+			<div class="personInfo-head-name">V闪闪</div>
+			<div class="personInfo-head-weibo"><input type="button" value="微博"></div>
+		</div>
+		<div class="personInfo-func">
+			<div class="personInfo-func-lineOne">
+				<input type="button" value="加好友">
+				<input type="button" value="发纸条">
+			</div>
+			<div class="personInfo-func-lineTwo">
+				<input type="button" value="写留言">
+				<input type="button" value="加关注">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	17.外边距</title>
+	<style>	
+		div{
+			width: 100px;
+			height: 100px;
+		}
+		.margin-cowspan1{
+			background-color: pink;
+			margin-bottom: 30px;
+			margin-top: 40px;
+		}
+		.margin-cowspan2{
+			background-color: orange;
+			margin: 40px 0px 30px;
+		}
+		.margin-cowspan-father{
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+			/*display: inline-block;*/
+			/*float: left;*/
+			/*overflow: hidden;*/
+			padding-top: 1px;
+			/*border: 2px black solid;*/
+			margin: 0px 0px 40px;
+		}
+		/*.margin-cowspan-son1{
+			background-color: red;
+			margin: 30px 0px 0px;
+		}*/
+		.margin-cowspan-son2{
+			background-color: green;
+			/*border:2px black solid;*/
+			margin: 200px 0px 200px;
+		}
+
+	</style>
+</head>
+<body>
+	1.什么是外边距？<br>	
+	围绕着元素的空白区域就是外边距，设置外边距会在元素外创建额外的“空白”	<br>
+	2.外边距的颜色？<br>	
+	外边距始终是透明的，可以看到其父盒子的颜色<br>
+	4.全局外边距的设置顺序?<br>	
+	外边距的设置顺序也是上右下左，当下为空是复制上的，当左为空时复制右的，当右为空时复制上的<br>
+	5.单边外边距?<br>	
+	可以为上，右，下，左的外边距分别设置外边距属性
+	6.外边距的问题？<br>	
+	6.1不同情况下垂直方向的外边距合并<br>	
+		1）	兄弟元素之间，相邻的marign-top或margin-bottom会发生合并，合并后取较大那个<br>	
+		<div class="margin-cowspan1"></div>
+		<div class="margin-cowspan2"></div>
+		2）父盒子的margin-top或者margin-bottom与其第一个子元素或者最后一个子元素的margin-top或margin-bottom发生垂直方向上的外边距合并(嵌套盒子无限合并),会出现父盒子塌陷问题
+		<div class="margin-cowspan-father">
+			<!-- <div class="margin-cowspan-son1"></div> -->
+			<div class="margin-cowspan-son2"></div>
+		</div>
+	<p>6.2这种“bug"存在的原因</p><br>	
+	6.3解决办法：<br>	
+	1）为父盒子设置边框，padding等隔开<br>
+	2)更改元素属性为浮动框，或者行内元素<br>
+	3）设置不同的格式化上下文(只有给其父盒子设置overflow：hidden才会起作用)<br>
+	6.5注意点：只有标准流中的块框的垂直外边距才会发生合并。行内框，浮动框或绝对定位之间的外边距不存在合并问题<br>	
+</body>
+</html>

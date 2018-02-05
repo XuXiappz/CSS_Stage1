@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>16.内边距</title>
+	<style>
+		.padding-test{
+			padding: 20px 30px 40px 50px;
+			background-color: orange;
+			width: 100px;
+			height: 100px;
+			word-break: break-all; 
+			word-wrap:break-word;
+		}
+		.padding-width{
+			background-color: pink;
+			width: 100px;
+			height: 100px;
+			border: orange solid 3px;
+			padding: 20px 30px;
+		}
+		.padding-width1{
+			background-color: pink;
+			width: 200px;
+			height: 200px;
+			border: orange solid 3px;
+			padding-top: 20px;
+		}
+		.padding-width1-son{
+			background-color: green;
+			width: 100px;
+			height: 100px;
+			border: red solid 3px;
+			padding: 20px 60px;
+		}	
+
+		.father{
+			width: 100px;
+			background-color: orange;
+			padding-top: 40px;
+		}
+		.first-son{
+			background-color: green;
+		}
+		.second-son{
+			background-color: pink;
+			margin-top: 40px;
+		}
+	</style>
+</head>
+<body>
+	1.padding是什么呢？<br>
+	1)padding是指边框和内容中间的“留白”<br>
+	<div class="padding-test">woshiwenziwenziwwenziwenzi</div>
+	2.padding的范围是在哪儿呢？<br>
+	1）padding的范围是内容和边框之间的部分<br>
+	3.padding的颜色是？<br>
+	1)padding的颜色就是元素的背景颜色<br>
+	4.padding的也符合值复制和单边内边距
+	1)全局padding值设置为上，右，下，左<br>
+	2)全局padding值设置满足值复制，下没有从上复制；左没有从右复制，左没有从上复制<br>
+	4.padding 会撑开所在元素的宽度，但是不会撑开其父元素的宽度<br>	
+	<div class="padding-width">	</div>
+	<br>	
+	<div class="padding-width1">	
+		<div class="padding-width1-son">	</div>
+	</div>
+	5.padding的使用场景<br>
+	1)如果要给边框内添加空白<br>
+	2）添加的空白带元素的颜色<br>
+	3）垂直方向上欲留叠加的空白<br>
+	4）一般是用来描述包含关系的，欲让内容距离边框不这么挤<br>
+	<div class="father">
+		<div class="first-son">大儿子,同爸爸有点距离</div>
+		<div class="second-son">小儿子,同哥哥有点距离</div>
+	</div>
+	6.关于padding影响盒子大小的问题（继承的盒子不会被撑大）？这里还有些不太懂
+
+
+
+</body>
+</html>

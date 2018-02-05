@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>15.表单控件案例</title>
+	<style>
+		.username{
+			border : dashed 1px green;
+			background-color: #ccc;
+			outline-style: none;
+		}
+		.username:focus{
+			background-color: red;
+		}
+		.email{
+			border: none;
+			border-bottom: dotted 1px red;
+			outline-style: none;
+		}
+		.search{
+			border: solid 1px black;
+			background: url('images/serch.jpg') right no-repeat;
+		}
+	</style>
+</head>
+<body>
+<!-- label 可以通过for属性绑定一个id与for属性相同表单控件，从而实现点击label文字时可以使表单获得对应的获取焦点事件 -->
+	<label for="username">用户名：</label><input type="text" class="username" id="username"><br><br>
+	邮箱：<input type="text" class="email"><br><br>
+	搜索一下：<input type="text" class="search"><br><br>
+</body>
+</html>

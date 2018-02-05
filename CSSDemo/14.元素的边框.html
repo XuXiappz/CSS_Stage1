@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>14.元素的边框</title>
+	<style>
+		.border-position{
+	 		border: dashed green 5px;
+	 		width: 300px;
+	 		height: 300px;
+			background-color: orange; 
+	}
+		.border-color-father{
+			color: pink
+		}
+		.border-color-son{
+			color: blue;
+			height: 100px;
+			width: 100px;
+			border: dotted 6px;
+		}
+		.border-width-test{
+			background-color: yellow;
+			width: 100px;
+			height: 100px;
+			border: 6px green;
+		}
+		.border-copy{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			border-color: green;
+		 	border-width: 2px 4px 8px;
+			border-style: solid dashed;
+		}
+		table{
+			width: 300px;
+			height: 30px;
+			border: solid 1px green;
+			border-collapse: collapse;
+		}
+		td{
+			border: solid 1px green;
+			/*border-collapse: collapse;*/
+		}
+	</style>
+</head>
+<body>
+	1.边框绘制的位置：边框是绘制在背景上的，而背景在css2.1之后明确指出包含元素内容+内边距
+	<div class="border-position">
+		
+	</div>
+	2.边框的颜色如果没有设置则来自于元素自己的前景色或者继承来的前景色
+	<div class="border-color-father">
+		<div class="border-color-son"></div>
+	</div>
+	3.如果没有边框的样式，边框就没有宽度
+	<div class="border-width-test"></div>
+	4.边框属性连写也支持“值复制” ，顺序是上，右，下，左；上复制给下；右复制给左，上赋值给左；
+	<div class="border-copy"></div>
+	5.表格边框合并 实现细线表格,发现一个有意思的问题，直接给table设置border会让table和tr,td都有边框，如果放到css中table管table，td什么的需要自己来搞定
+	<table>
+		<tr>
+			<td>1111</td>
+			<td>1111</td>
+			<td>1111</td>
+		</tr>
+		<tr>
+			<td>2222</td>
+			<td>2222</td>
+			<td>2222</td>
+		</tr>
+		<tr>
+			<td>3333</td>
+			<td>3333</td>
+			<td>3333</td>
+		</tr>
+	</table>
+</body>
+</html>
