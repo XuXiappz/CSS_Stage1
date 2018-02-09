@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>28.顺风定位盒子练习</title>
+	<style>
+		body,ul,li,div{
+			padding: 0px;
+			margin: 0px;
+		}
+		.banner{
+			background-color: gray;
+			height: 470px;
+			width: 1240px;
+			position: relative;
+			margin: 0 auto;
+			background: url('images/sf_bg.png');
+		}
+		.nav{
+			background-color: #333;
+			height: 60px;
+			width: 960px;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			margin-left: -480px;
+		}
+		.nav ul li{
+			list-style: none;
+			float: left;
+			text-align: center;
+		}
+		.nav ul li a{
+			display: inline-block;
+			text-decoration: none;
+			font: 18px/60px 微软雅黑;
+			color: white;
+			height: 60px;
+			width: 160px;
+		}
+		.nav ul li a:hover{
+			background-color: #fff;
+			color: #333;
+		}
+		.nav .order-search:hover{
+			color: white;
+			background-color: #333;
+		}
+		.order-search-view{
+			width: 342px;
+			height: 126px;
+			background: url('images/sf_search.png');
+			position: absolute;
+			top: -126px;
+			left: 0px;
+		}
+		.search-arrow{
+			width: 13px;
+			height: 9px;
+			position: absolute;
+			background: url('images/sf_shaw.png');
+			bottom: -9px;
+			left: 96px;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<div class="nav">
+			<ul>
+				<li><a href="#" class="order-search">运单查询</a></li>
+				<li><a href="#">运费查询</a></li>
+				<li><a href="#">时效查询</a></li>
+				<li><a href="#">服务网点查询</a></li>
+				<li><a href="#">收送范围查询</a></li>
+				<li><a href="#">客户专区</a></li>
+			</ul>
+			<div class="order-search-view">
+				<div class="search-arrow"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

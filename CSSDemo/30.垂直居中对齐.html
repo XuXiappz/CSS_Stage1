@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>30.垂直居中对齐</title>
+	<style>
+		img{
+			vertical-align: middle;
+		}
+		.wrapper{
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			background-color: pink;
+			text-align: center;/*可以让行内元素水平居中*/
+		}
+		.testBox1{
+			display: inline-block;
+			height: 200px;
+			width: 100px;
+			background-color: deepskyblue;
+			vertical-align: middle;/*以前总是以为vertical-align与text-align是同样的道理，一个是垂直居中，一个是水平居中*/
+
+		}
+		.father{
+			width: 300px;
+			height: 300px;
+			background-color: deepskyblue;
+			/*font-size: 0px;*/
+		}
+		.helper{
+			display: inline-block;
+			height: 100%;
+			width: 0px;
+			vertical-align: middle;
+		}
+		.son{
+			display: inline-block;
+			width: 100px;
+			height: 1px;
+			background-color: orange;
+			vertical-align: middle;
+		}
+		.father1{
+			display: table-cell;
+			vertical-align: middle;
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+		.son1{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		.father2{
+			width: 300px;
+			height: 300px;
+			background-color: green;
+			position: relative;
+		}
+		.son2{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: absolute;
+			top:0px;
+			bottom: 0px;
+			margin: auto 0;
+		}
+		.father3{
+			width: 300px;
+			height: 300px;
+			background-color: yellowgreen;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		.son3{
+			width: 100px;
+			height: 100px;
+			background-color: brown;
+		}
+	</style>
+</head>
+<body>
+一点小例子
+1.图片和文字垂直居中对齐<br>
+	<div class="box">
+		红点和我对齐了么？
+		<img src="images/dog.png" alt="">
+	</div>
+关于垂直居中<br>
+1.方法一利用display:inline-block ;(伪类) <br>
+利用添加辅助元素helper+同时设置helper和testBox1的vertical-align：center实现垂直居中 <br>
+	<div class="father">
+		<div class="helper"></div>
+		<div class="son"></div>x
+	</div>	
+	1.1.关于baseline：<br>
+		<img src="images/baseLine.png" alt="">
+	1.2.baseline 的确定规则<br>
+	参考链接：https://www.cnblogs.com/starof/p/4512284.html?utm_source=tuicool&utm_medium=referral <br>
+		1、inline-table元素的baseline是它的table第一行的baseline。<br>
+
+		2、父元素【line box】的baseline是最后一个inline box 的baseline。 <br>
+
+		3、inline-block元素的baseline确定规则<br>
+
+		规则1：inline-block元素，如果内部有linebox，则inline-block元素的baseline就是最后一个作为内容存在的元素[inline box] 的baseline，而这个元素的baseline的确定就要根据它自身来定了。<br>
+		规则2：inline-block元素，如果其内部没有line box或它的overflow属性不是visible，那么baseline将是这个inline-block元素的底margin边界<br>
+	1.3.vertical-align基于baseline的不同取值<br>
+	1)baseline:将子元素盒子的baseline与父盒子的baseline对齐
+	2)middle:将元素盒子的垂直中点与父盒子的baseline加上父盒子的x-height的一半位置对齐
+2.方法二：margin:auto,0(定位) 常用
+	<div class="father2">
+		<div class="son2"></div>
+	</div>
+3.方法三：弹性盒子
+	<div class="father3">
+		<div class="son3"></div>
+	</div>
+4.方法四：表格
+	<div class="father1">
+		<div class="son1"></div>
+	</div>	
+</body>
+</html>

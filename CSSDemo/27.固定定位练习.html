@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>27.固定定位练习</title>
+	<style>
+		body,div,ul,li{
+			margin: 0px;
+			padding: 0px;
+		}
+		.nav{
+			width: 1519px;
+			height: 44px;
+			margin: 0 auto;
+			background: url('images/gd_nav.png') no-repeat;
+
+		}
+		.con-main{
+			width: 998px;
+			height: 1677px;
+			position: relative;
+			margin: 0 auto;
+			background: url('images/gd_mian.png') no-repeat;
+		}
+		.con-leftAD,.con-rightAD{
+			width: 120px;
+			height: 288px;
+			position: fixed;
+			top: 70px;
+		}
+		.con-leftAD{
+			left: 0px;
+			background: url('images/gd_left.png') no-repeat;
+		}
+		.con-rightAD{
+			right: 0px;
+			background: url('images/gd_right.png') no-repeat;
+		}
+		.con-toTop{
+			position: fixed;
+			bottom: 100px;
+			right: 10px;
+			width: 50px;
+			height: 50px;
+			background: url('images/gd_top.png') no-repeat;
+		}
+		.con-toTop a{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav" id="top"></div>
+	<div class="container">
+		<div class="con-main"></div>
+		<div class="con-leftAD"></div>
+		<div class="con-rightAD"></div>
+		<div class="con-toTop"><a href="#top"></a></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一点小干货</title>
+	<style>
+		.father{
+			max-width: 800px;
+			/*width: 800px;*/
+			height: 300px;
+			margin: 0 auto;
+			background-color: orange;
+		}
+		.son{
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+			background-color: pink;
+		}
+		.box1 ,.box2 ,.box3{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		.box2,.box3{
+			padding: 10px;
+			border: 2px solid green;
+		}
+		.box3{
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<p>1.display 是CSS中最重要的用于控制布局的属性。每个元素都有一个默认的 display 值，这与元素的类型有关。</p>
+	<p>2.block:div 是一个标准的块级元素。一个块级元素会新开始一行并且尽可能撑满容器</p>
+	<p>3.inline:span 是一个标准的行内元素。一个行内元素可以在段落中 <span> 像这样 </span> 包裹一些文字而不会打乱段落的布局</p>
+	<p>4.none:通常被 JavaScript 用来在不删除元素的情况下隐藏或显示元素</p>
+	<p>5.把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。</p>
+	<p>6.每个元素都有一个默认的 display 类型。不过你可以随时随地的重写它！</p>
+	<p>7.修改display类型常见的例子是：把 li 元素修改成 inline，制作成水平菜单。</p>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+	<p>8.正常流中块级元素框的水平部分综合就等于其包含块的width；从某种程度上，auto弥补实际值与所需总和的差距</p>
+	<p>9.唯一的问题是，当浏览器窗口比元素的宽度还要窄时，浏览器会显示一个水平滚动条来容纳页面。优化方案使用： max-width(所有主流浏览器包括ie7+都支持max-width) 替代 width</p>
+	<div class="box1"></div><br>
+	<div class="box2"></div><br>
+	<div class="box3"></div><br>
+	<p>10.盒模型，当你设置了元素的宽度，实际展现的元素却超出你的设置，这是因为元素的边框和内边距会撑开元素</p>
+	<p>11.10中的问题，代代相传的办法是“数学计算”,现在新增"box-sizing"的CSS属性，当你设置一个元素为 box-sizing: border-box;此时元素的内边距和边框不会增加他的宽度</p>
+	<p>12.记住一个“positioned”元素是指 position 值不是 static 的元素。</p>
+	<p>13.百分比是相对于包含块的计量单位。</p>
+	<p>14.“响应式设计（Responsive Design” 是一种让网站针对不同的浏览器和设备“呈现”不同显示效果的策略，这样可以让网站在任何情况下显示的很棒！</p>
+	<p>15.你可以创建很多网格来铺满浏览器。在过去很长的一段时间内使用 float 是一种选择，但是使用 inline-block 会更简单。既inline-block布局</p>
+	<p>新的 flexbox 布局模式被用来重新定义CSS中的布局方式</p>
+</body>
+</html>

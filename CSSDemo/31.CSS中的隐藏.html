@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>31.CSS中的隐藏</title>
+	<style>
+		body,div,ul,li{
+			margin: 0px;
+			padding: 0px;
+		}
+		.nav{
+			background-color: gray;
+			width: 1200px;
+			height: 44px;
+			margin: 0 auto;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+		ul li{
+			display: inline-block;
+			float: left;
+			text-align: center
+		}
+		ul li a{
+			text-decoration: none;
+			display: inline-block;
+			width: 100px;
+			height: 44px;
+			color: white;
+			font: 18px/44px 微软雅黑;
+		}
+		ul li a:hover{
+			background-color:orange;
+		}
+		.container{
+			overflow: hidden;
+		}
+		.box-red{
+			background-color: red;
+		}
+		.box-blue{
+			background-color: blue;
+		}
+		.box-green{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="#box-red">我是红色</a></li>
+			<li><a href="#box-blue">我是蓝色</a></li>
+			<li><a href="#box-green">我是绿色</a></li>
+		</ul>
+	</div>
+	<div class="box container">
+		<div id="box-red" class="box box-red"></div>
+		<div id="box-blue" class="box box-blue"></div>
+		<div id="box-green" class="box box-green"></div>
+	</div>
+</body>
+</html>

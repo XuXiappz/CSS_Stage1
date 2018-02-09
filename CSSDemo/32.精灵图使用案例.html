@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>32.精灵图使用案例</title>
+	<style>	
+		body,div,ul,li{
+			margin: 0px;
+			padding: 0px;
+		}
+		.nav{
+			background-color: #000;
+			height: 48px;
+			margin-top: 100px;
+		}
+		.nav-con{
+			width: 1120px;
+			margin: 0 auto;
+			height: 48px;
+			position: relative;
+		}
+		ul li{
+			list-style: none;
+			display: inline-block;
+			float: left;
+			text-align: center;
+		}
+		ul li a{
+			display: inline-block;
+			height: 48px;
+			font: 16px/48px 微软雅黑;
+			text-decoration: none;
+			padding: 0px 10px;
+			color: white;
+			background: #000;
+		}
+
+		ul li a:hover{
+			background: #3a92d0;
+		}
+		.hot{
+			width: 25px;
+			height: 20px;
+			position: absolute;
+			left: 193px;
+			top: -7px;
+			background: url('images/sprite.png') -59px 0px no-repeat;
+		}
+		.new{
+			width: 26px;
+			height: 20px;
+			position: absolute;
+			left: 340px;
+			top: -7px;
+			background: url('images/sprite.png') -135px 0px no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav-con">
+			<div class="hot"></div>
+			<div class="new"></div>
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">Java</a></li>
+				<li><a href="#">UI设计</a></li>
+				<li><a href="#">前端与移动开发</a></li>
+				<li><a href="#">问答专区</a></li>
+				<li><a href="#">iOS</a></li>
+				<li><a href="#">PHP</a></li>
+				<li><a href="#">C/C++</a></li>
+				<li><a href="#">python</a></li>
+				<li><a href="#">网络营销</a></li>
+				<li><a href="#">活动专区</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

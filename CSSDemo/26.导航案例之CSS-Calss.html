@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>26.导航案例之CSS-Calss</title>
+	<style>
+		body,div,ul,li{
+			padding: 0px;
+			margin: 0px;
+		}
+		.nav{
+			height: 190px;
+			width: 600px;
+			margin: 0 auto;
+		}
+		.nav-banner{
+			width: 600px;
+			height: 150px;
+			background: url('images/CSS_banner.jpg');
+			margin-bottom: 5px;
+		}
+		.nav-bar{
+			width: 600px;
+			height: 32px;
+			background-color: blue;
+			background: url('images/CSS_nav_bg.jpg');
+		}
+		.nav-bar ul li{
+			list-style: none;
+			float: left;
+			text-align: center;
+		}
+		.nav-bar ul li a{
+			display: inline-block;
+			width: 80px;
+			height: 32px;
+			background: url('images/CSS_a_bg.jpg') no-repeat;
+			text-decoration: none;
+			color: #fff;
+			line-height: 32px;
+		}
+		.nav-bar ul li a:hover{
+			background: url('images/CSS_a_bg_light.jpg');
+		}
+
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class="nav-banner"></div>
+		<div class="nav-bar">
+			<ul>
+				<li><a href="#">首页导航</a></li>
+				<li><a href="#">首页导航</a></li>
+				<li><a href="#">首页导航</a></li>
+				<li><a href="#">首页导航</a></li>
+				<li><a href="#">首页导航</a></li>
+				<li><a href="#">首页导航</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

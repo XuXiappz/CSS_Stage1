@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>31.水平居中对齐</title>
+	<style>
+		.box1{
+			width: 300px;
+			height: 300px;
+			background-color: deepskyblue;
+			margin: 0 auto;
+			position: relative;
+		}
+		.box1-pos{
+			display: inline-block;
+			width: 100%;
+			position: absolute;
+			bottom: 0px;
+			font-size: 0px;/*如果不写，由于浏览器解析重排html代码会有一个4px的距离*/
+			text-align: center;
+		}
+		.box1-son{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			background-color: yellowgreen;	
+			
+		}
+		.box2{
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			background-color: skyblue;
+			position: relative;
+		}
+		.box2-pos{
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+		}
+		.box2-son{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			margin: 0 auto;
+		}
+		.box3{
+			width: 300px;
+			height: 300px;
+			background-color: deepskyblue;
+			margin: 0 auto;
+			position: relative;
+		}
+		.box3-son{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			margin: 0 auto;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+		}
+		.box4{
+			width: 300px;
+			height: 300px;
+			background-color: skyblue;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		.box4-son{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	实现下中对齐
+	方法一：利用display:inline-block + text-align:center <br>
+	利用一个盒子专门作为实现底部定位功能的盒子<br>
+	<div class="box1">
+		<div class="box1-pos"><div class="box1-son"></div></div>
+	</div>
+	方法二：利用margin:0 auto 实现水平居中<br>
+	利用一个盒子专门实现底部定位功能的盒子<br>
+	<div class="box2">
+		<div class="box2-pos"><div class="box2-son"></div></div>
+	</div>
+	方法三：利用为margin中的auto设置参考值实现定位<br>
+	<div class="box3">
+		<div class="box3-son"></div>
+	</div>
+	方法四：利用flex弹性盒子布局实现水平居中
+	<div class="box4">
+		<div class="box4-son"></div>
+	</div>
+</body>
+</html>

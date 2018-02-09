@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>33.滑动门系列案例</title>
+	<style>
+		body,div,ul,li{
+			margin: 0;
+			padding: 0;
+		}
+		.simple-slide-door{
+			display: inline-block;
+		}
+		.simple-content{
+			display: inline-block;
+			height: 100px;
+			float: left;
+			background: url('images/simple-content.png') repeat-x;
+		}
+		.simple-left{
+			width: 10px;
+			height: 100px;
+			float: left;
+			background: url('images/simple-left.png') no-repeat;
+		}
+		.simple-right{
+			width: 12px;
+			height: 100px;
+			float: left;
+			background: url('images/simple-right.png') no-repeat;
+		}
+		.complex-slide-door{
+			display: inline-block;
+			height: 35px;
+			color: #fff;
+			padding-left: 7px;
+			background: url('images/bg_r1_c1.png') no-repeat;
+		}
+		.complex-slide-other{
+			display: inline-block;
+			height: 35px;
+			line-height: 35px;
+			background: url('images/bg_r1_c2.png') no-repeat right;
+			padding-right: 20px;
+		}
+		.complex-slide-door:hover{
+			background: url('images/bbg_r1_c1.png') no-repeat;
+		}
+		.complex-slide-door:hover .complex-slide-other{
+			background: url('images/bbg_r1_c2.png') no-repeat right;
+		}
+		.nav{
+			background: url('images/weixin_bar.jpg')  repeat-x;
+		}
+		.nav-con{
+			height: 73px;
+			width: 1120px;
+			margin: 0 auto;	
+		}
+		.nav-con ul li{
+			display: inline-block;
+			float: left;
+			list-style: none;
+			height: 33px;
+			position: relative;
+			padding: 20px 20px;
+		}
+		.nav-con ul li a{
+			display: inline-block;
+			padding-left: 14px;
+			height: 33px; 
+			text-align: center;
+			background: url('images/weixin_bg.png') no-repeat 0px -144px;
+			color: #fff;
+			text-decoration: none;
+		}
+		.nav-con ul li a span{
+			display: inline-block;
+			height: 33px;	
+			line-height: 33px;
+			padding-right: 20px;	
+			background: url('images/weixin_bg.png') no-repeat right -144px;
+		}
+		.nav-con ul li a:hover{
+			color: green;
+		}
+		.nav-con ul li a:hover span{
+
+		}
+
+	</style>
+</head>
+<body>
+	0.滑动门的原理：<br>
+	一个div中的内容部分span来装载，背景水平平铺；左右分别用一个div左右浮动搞定<br>
+	1.简单滑动门<br>
+	<div class="simple-slide-door">
+		<div class="simple-left"></div>
+		<sapn class="simple-content">你好不好好不好ndndndndddd</sapn>
+		<div class="simple-right"></div>
+	</div>
+	<br>
+	2.复杂滑动门<br>
+	<a href="#" class="complex-slide-door">
+		<span class="complex-slide-other">看看到底如何</span>
+	</a>
+	<br>
+	3.微信滑动门<br>
+	<div class="nav">
+		<div class="nav-con">
+			<ul>
+				<li><a href="#"><span>首页</span></a></li>
+				<li><a href="#"><span>下载吧</span></a></li>
+				<li><a href="#"><span>公共平台</span></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
